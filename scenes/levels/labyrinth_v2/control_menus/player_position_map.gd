@@ -8,6 +8,7 @@ extends Control
 
 
 @onready var player_point: TextureRect = %PlayerPoint
+@onready var labyrinth_map_texture: TextureRect = %LabyrinthMapTexture
 
 
 var time: float = 0
@@ -31,5 +32,6 @@ func _information_recieved(info: Dictionary) -> void:
 
 func _physics_process(delta: float) -> void:
 	time += delta
-	player_point.position = player_position * size - (player_point.size/2.0)
+	var labyrinth_size := labyrinth_map_texture.size
+	player_point.position = player_position * labyrinth_size - (player_point.size/2.0)
 	player_point.rotation = player_rotation

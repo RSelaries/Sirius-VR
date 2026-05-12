@@ -62,7 +62,9 @@ func _on_puzzle_button_toggled(_toggle_on: bool) -> void:
 	tween.set_parallel(true)
 	tween.tween_property(hand_sprite, "material_override:emission", Color.BLACK, 0.5)
 	for pzl_btn in puzzle_btns:
-		tween.tween_property(pzl_btn.get_parent().get_parent().find_child("Screen").get_surface_override_material(0), "emission", Color.BLACK, 0.5)
+		var pzl_btn_screen: MeshInstance3D = pzl_btn.get_parent().get_parent().find_child("Screen")
+		var pzl_btn_material: StandardMaterial3D = pzl_btn_screen.get_surface_override_material(0)
+		tween.tween_property(pzl_btn_material, "emission", Color.BLACK, 0.5)
 	popup.queue_free()
 
 
