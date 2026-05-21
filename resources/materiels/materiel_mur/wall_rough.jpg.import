@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cay180swvut6c"
-path.s3tc="res://.godot/imported/murs_rough.jpg-d480211c58570333885ee56779277c20.s3tc.ctex"
-path.etc2="res://.godot/imported/murs_rough.jpg-d480211c58570333885ee56779277c20.etc2.ctex"
+path.s3tc="res://.godot/imported/wall_rough.jpg-d819baa8b82f43ed14b4fe59cadd7508.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_rough.jpg-d819baa8b82f43ed14b4fe59cadd7508.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/materiels/materiel_mur/murs_rough.jpg"
-dest_files=["res://.godot/imported/murs_rough.jpg-d480211c58570333885ee56779277c20.s3tc.ctex", "res://.godot/imported/murs_rough.jpg-d480211c58570333885ee56779277c20.etc2.ctex"]
+source_file="res://resources/materiels/materiel_mur/wall_rough.jpg"
+dest_files=["res://.godot/imported/wall_rough.jpg-d819baa8b82f43ed14b4fe59cadd7508.s3tc.ctex", "res://.godot/imported/wall_rough.jpg-d819baa8b82f43ed14b4fe59cadd7508.etc2.ctex"]
 
 [params]
 

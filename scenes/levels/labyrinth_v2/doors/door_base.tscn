@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://by1ahikc0fxe2"]
 
-[ext_resource type="Material" uid="uid://doa1jko6igydq" path="res://resources/materiels/materiel_mur/murs.tres" id="1_bwglf"]
 [ext_resource type="Script" uid="uid://c214gpdgdi68b" path="res://scenes/levels/labyrinth_v2/doors/door_base.gd" id="1_hptlf"]
+[ext_resource type="Material" uid="uid://ebuwauy2j27e" path="res://resources/materiels/concrete_2/concrete_2.material" id="2_rmk0x"]
 [ext_resource type="PackedScene" uid="uid://w2doaetlmlaq" path="res://scenes/particles/foam_particles.tscn" id="3_u0n6h"]
 [ext_resource type="AudioStream" uid="uid://c5dvr4a7kfc5q" path="res://assets/sounds/tectonic_rumbling.mp3" id="4_rmk0x"]
 
@@ -160,7 +160,7 @@ metadata/_custom_type_script = "uid://c214gpdgdi68b"
 [node name="CSGBox3D46" type="CSGBox3D" parent="." unique_id=605465682]
 use_collision = true
 size = Vector3(0.5, 6, 2.5)
-material = ExtResource("1_bwglf")
+material = ExtResource("2_rmk0x")
 
 [node name="FoamParticles" parent="." unique_id=1056915693 instance=ExtResource("3_u0n6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0)

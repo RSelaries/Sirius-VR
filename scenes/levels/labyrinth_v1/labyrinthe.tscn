@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c11d7np3m7dd6"]
 
 [ext_resource type="PackedScene" uid="uid://yxxn5vnnxth" path="res://scenes/custom_scene_base/custom_scene_base.tscn" id="1_x0oo5"]
-[ext_resource type="Material" uid="uid://doa1jko6igydq" path="res://resources/materiels/materiel_mur/murs.tres" id="2_qp57t"]
-[ext_resource type="Texture2D" uid="uid://bobp5ykshg63g" path="res://resources/materiels/materiel_mur/murs_alb.jpg" id="3_jt1a8"]
-[ext_resource type="Texture2D" uid="uid://dy1fwx3s0b46r" path="res://resources/materiels/materiel_mur/murs_ao.jpg" id="4_vi2im"]
-[ext_resource type="Texture2D" uid="uid://bv2l260wpuwub" path="res://resources/materiels/materiel_mur/murs_norm.jpg" id="5_qft5v"]
-[ext_resource type="Texture2D" uid="uid://cay180swvut6c" path="res://resources/materiels/materiel_mur/murs_rough.jpg" id="6_ftmkk"]
+[ext_resource type="Material" uid="uid://doa1jko6igydq" path="res://resources/materiels/materiel_mur/wall.tres" id="2_qp57t"]
+[ext_resource type="Texture2D" uid="uid://bobp5ykshg63g" path="res://resources/materiels/materiel_mur/wall_alb.jpg" id="3_jt1a8"]
+[ext_resource type="Texture2D" uid="uid://dy1fwx3s0b46r" path="res://resources/materiels/materiel_mur/wall_ao.jpg" id="4_vi2im"]
+[ext_resource type="Texture2D" uid="uid://bv2l260wpuwub" path="res://resources/materiels/materiel_mur/wall_norm.jpg" id="5_qft5v"]
+[ext_resource type="Texture2D" uid="uid://cay180swvut6c" path="res://resources/materiels/materiel_mur/wall_rough.jpg" id="6_ftmkk"]
 [ext_resource type="PackedScene" uid="uid://cu1ft2t8kq43t" path="res://scenes/levels/labyrinth_v1/mur_changeant/mur_changeant.tscn" id="7_vi2im"]
 [ext_resource type="Script" uid="uid://bv5rcfuldk0he" path="res://scenes/waiting_room/waiting_room_script.gd" id="8_disbp"]
 [ext_resource type="PackedScene" uid="uid://b68ltqrxac7iu" path="res://scenes/levels/labyrinth_v1/labyrinthe_control_menu.tscn" id="9_disbp"]
@@ -88,6 +88,17 @@ nodes/Trigger/node = SubResource("AnimationNodeBlend2_qw2u5")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0o1pi"]
+albedo_color = Color(0.19770986, 0.6455397, 0.99999934, 1)
+albedo_texture = ExtResource("3_jt1a8")
+metallic = 1.0
+roughness_texture = ExtResource("6_ftmkk")
+normal_enabled = true
+normal_texture = ExtResource("5_qft5v")
+ao_enabled = true
+ao_texture = ExtResource("4_vi2im")
+uv1_triplanar = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co7d3"]
 albedo_texture = ExtResource("3_jt1a8")
 metallic = 1.0
@@ -130,7 +141,7 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 4.25)
 use_collision = true
 size = Vector3(20.5, 0.5, 29)
-material = ExtResource("2_qp57t")
+material = SubResource("StandardMaterial3D_0o1pi")
 
 [node name="Sol2" type="CSGBox3D" parent="LabyrintheStructure" index="1" unique_id=736222356]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4.75, 13.5)
@@ -612,6 +623,11 @@ stream = ExtResource("13_nq44w")
 volume_db = 80.0
 autoplay = true
 max_distance = 5.0
+
+[node name="Label3D" type="Label3D" parent="LabyrintheStructure" index="7" unique_id=1038047383]
+transform = Transform3D(1, -3.821371e-15, -1.7484555e-07, 1.7484555e-07, 4.371139e-08, 1, 3.821371e-15, -1, 4.371139e-08, 1.2914505, 5.010347, 9.983907)
+text = "Sortie"
+font_size = 96
 
 [node name="MursRouges" type="Node3D" parent="." index="4" unique_id=1117922225]
 

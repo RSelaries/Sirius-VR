@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy1fwx3s0b46r"
-path.s3tc="res://.godot/imported/murs_ao.jpg-9d54be8f084df1a52732e463984b9121.s3tc.ctex"
-path.etc2="res://.godot/imported/murs_ao.jpg-9d54be8f084df1a52732e463984b9121.etc2.ctex"
+path.s3tc="res://.godot/imported/wall_ao.jpg-a38b46f918ac1141101f7e7898b5b3bb.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_ao.jpg-a38b46f918ac1141101f7e7898b5b3bb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/materiels/materiel_mur/murs_ao.jpg"
-dest_files=["res://.godot/imported/murs_ao.jpg-9d54be8f084df1a52732e463984b9121.s3tc.ctex", "res://.godot/imported/murs_ao.jpg-9d54be8f084df1a52732e463984b9121.etc2.ctex"]
+source_file="res://resources/materiels/materiel_mur/wall_ao.jpg"
+dest_files=["res://.godot/imported/wall_ao.jpg-a38b46f918ac1141101f7e7898b5b3bb.s3tc.ctex", "res://.godot/imported/wall_ao.jpg-a38b46f918ac1141101f7e7898b5b3bb.etc2.ctex"]
 
 [params]
 

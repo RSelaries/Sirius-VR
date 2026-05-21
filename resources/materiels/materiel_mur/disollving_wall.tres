@@ -1,0 +1,36 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cfb4rnty5ux85"]
+
+[ext_resource type="Shader" uid="uid://chuxlyisfcxm6" path="res://resources/shaders/dissolve_3d.gdshader" id="1_jkj43"]
+[ext_resource type="Texture2D" uid="uid://bobp5ykshg63g" path="res://resources/materiels/materiel_mur/wall_alb.jpg" id="2_k03xh"]
+[ext_resource type="Texture2D" uid="uid://dy1fwx3s0b46r" path="res://resources/materiels/materiel_mur/wall_ao.jpg" id="3_6milr"]
+[ext_resource type="Texture2D" uid="uid://bv2l260wpuwub" path="res://resources/materiels/materiel_mur/wall_norm.jpg" id="4_ls2fm"]
+[ext_resource type="Texture2D" uid="uid://cay180swvut6c" path="res://resources/materiels/materiel_mur/wall_rough.jpg" id="5_2yp5j"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jkj43"]
+noise_type = 3
+frequency = 0.049
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k03xh"]
+noise = SubResource("FastNoiseLite_jkj43")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_jkj43")
+shader_parameter/dissolve_amount = 0.150000007125
+shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_k03xh")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_k03xh")
+shader_parameter/roughness = 1.0
+shader_parameter/texture_roughness = ExtResource("5_2yp5j")
+shader_parameter/metallic = 1.0
+shader_parameter/specular = 0.5
+shader_parameter/texture_normal = ExtResource("4_ls2fm")
+shader_parameter/normal_scale = 1.000000807500001
+shader_parameter/texture_ambient_occlusion = ExtResource("3_6milr")
+shader_parameter/ao_light_affect = 0.0
+shader_parameter/triplanar = true
+shader_parameter/uv1_blend_sharpness = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)

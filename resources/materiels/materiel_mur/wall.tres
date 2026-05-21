@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://doa1jko6igydq"]
+
+[ext_resource type="Texture2D" uid="uid://bobp5ykshg63g" path="res://resources/materiels/materiel_mur/wall_alb.jpg" id="1_q3bus"]
+[ext_resource type="Texture2D" uid="uid://dy1fwx3s0b46r" path="res://resources/materiels/materiel_mur/wall_ao.jpg" id="2_y0iw4"]
+[ext_resource type="Texture2D" uid="uid://bv2l260wpuwub" path="res://resources/materiels/materiel_mur/wall_norm.jpg" id="3_ef1ep"]
+[ext_resource type="Texture2D" uid="uid://cay180swvut6c" path="res://resources/materiels/materiel_mur/wall_rough.jpg" id="4_bqt70"]
+
+[resource]
+albedo_texture = ExtResource("1_q3bus")
+metallic = 1.0
+roughness_texture = ExtResource("4_bqt70")
+normal_enabled = true
+normal_texture = ExtResource("3_ef1ep")
+ao_enabled = true
+ao_texture = ExtResource("2_y0iw4")
+uv1_triplanar = true

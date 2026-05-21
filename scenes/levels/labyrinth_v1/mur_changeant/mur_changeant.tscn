@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cu1ft2t8kq43t"]
 
 [ext_resource type="Script" uid="uid://dry6a3jhcht2j" path="res://scenes/levels/labyrinth_v1/mur_changeant/mur_changeant.gd" id="1_afx6d"]
-[ext_resource type="Texture2D" uid="uid://bobp5ykshg63g" path="res://resources/materiels/materiel_mur/murs_alb.jpg" id="2_52rkd"]
-[ext_resource type="Texture2D" uid="uid://dy1fwx3s0b46r" path="res://resources/materiels/materiel_mur/murs_ao.jpg" id="3_6aq7d"]
-[ext_resource type="Texture2D" uid="uid://bv2l260wpuwub" path="res://resources/materiels/materiel_mur/murs_norm.jpg" id="4_pje7e"]
-[ext_resource type="Texture2D" uid="uid://cay180swvut6c" path="res://resources/materiels/materiel_mur/murs_rough.jpg" id="5_is6by"]
+[ext_resource type="Texture2D" uid="uid://bobp5ykshg63g" path="res://resources/materiels/materiel_mur/wall_alb.jpg" id="2_52rkd"]
+[ext_resource type="Texture2D" uid="uid://dy1fwx3s0b46r" path="res://resources/materiels/materiel_mur/wall_ao.jpg" id="3_6aq7d"]
+[ext_resource type="Texture2D" uid="uid://bv2l260wpuwub" path="res://resources/materiels/materiel_mur/wall_norm.jpg" id="4_pje7e"]
+[ext_resource type="Texture2D" uid="uid://cay180swvut6c" path="res://resources/materiels/materiel_mur/wall_rough.jpg" id="5_is6by"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4p4v"]
 albedo_texture = ExtResource("2_52rkd")
