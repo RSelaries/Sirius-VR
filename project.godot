@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Sirius VR"
+config/tags=PackedStringArray("sirius")
 run/main_scene="uid://cvuly6s3nweo0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="uid://citbkjrcs3rig"
+config/icon="uid://bxtkpdp36jwvj"
 
 [autoload]
 

@@ -4,7 +4,7 @@ extends Node
 @export var labyrinth_size := Vector2(60.75, 60.75)
 
 
-@onready var player: XROrigin3D = $"../XROrigin3D"
+@export var player_camera: XRCamera3D
 @onready var control_panel_menu_loader: ControlPanelMenuLoader = %ControlPanelMenuLoader
 @onready var debug_sun: DirectionalLight3D = $DebugSun
 
@@ -15,11 +15,10 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	var player_position_2d := Vector2(player.global_position.x, player.global_position.z)
-	var ppos_relative_to_labyrinth := player_position_2d + (labyrinth_size/2)
-	var ppos_normalized := ppos_relative_to_labyrinth / labyrinth_size
-	
 	ControlPanel.send_information({
-		"player_position": ppos_normalized,
-		"player_rotation": player.global_rotation.y
+		"player_position": Vector2(
+			player_camera.global_position.x,
+			player_camera.global_position.z
+		),
+		"player_rotation": player_camera.global_rotation.y,
 	})

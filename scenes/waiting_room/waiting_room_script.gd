@@ -89,6 +89,8 @@ func _ready() -> void:
 	
 	if fullscreen_menu:
 		ControlPanel.fullscreen_left_side_menu()
+	else:
+		ControlPanel.disable_fullscreen()
 	
 	if not use_custom_right_side_panel:
 		ControlPanel.custom_right_side_panel = false
