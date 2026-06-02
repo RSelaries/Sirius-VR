@@ -14,7 +14,11 @@ func _on_ouvrir_portes_vertes_pressed() -> void:
 	if LabyrintheMurChangeant.portes_ouvertes == LabyrintheMurChangeant.GroupesMurs.MURS_VERT:
 		return
 	
-	LabyrintheMurChangeant.ouvrir_murs(LabyrintheMurChangeant.GroupesMurs.MURS_VERT)
+	if LabyrintheMurChangeant.portes_ouvertes == LabyrintheMurChangeant.GroupesMurs.MURS_ROUGES:
+		LabyrintheMurChangeant.ouvrir_murs(LabyrintheMurChangeant.GroupesMurs.MURS_BLEU)
+	else:
+		LabyrintheMurChangeant.ouvrir_murs(LabyrintheMurChangeant.GroupesMurs.MURS_ROUGES)
+	#LabyrintheMurChangeant.ouvrir_murs(LabyrintheMurChangeant.GroupesMurs.MURS_VERT)
 	opened_doors.text = "Aucune"
 	timer.start()
 	animating = true

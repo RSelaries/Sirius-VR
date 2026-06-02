@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://dnwpcvepswf5j" path="res://resources/sky_materials/night_time_sky.tres" id="2_eccc5"]
 [ext_resource type="Material" uid="uid://doa1jko6igydq" path="res://resources/materiels/materiel_mur/wall.tres" id="2_hwde8"]
 [ext_resource type="Script" uid="uid://cg505yk8i210u" path="res://scenes/levels/labyrinth_v2/labyrinth_v2.gd" id="2_i81g1"]
-[ext_resource type="PackedScene" uid="uid://dbib7fybud10o" path="res://scenes/levels/labyrinth_v2/doors/triangle_door/icons_door.tscn" id="9_hwde8"]
+[ext_resource type="PackedScene" uid="uid://dbib7fybud10o" path="res://scenes/levels/labyrinth_v2/doors/icons_door/icons_door.tscn" id="9_hwde8"]
 [ext_resource type="Material" uid="uid://b60ncxecqhht5" path="res://resources/materiels/concrete/concrete.tres" id="9_tmdj6"]
 [ext_resource type="Texture2D" uid="uid://cedrrkm0bcklh" path="res://assets/textures/labyrinth_texture.svg" id="10_hwde8"]
 [ext_resource type="PackedScene" uid="uid://by1ahikc0fxe2" path="res://scenes/levels/labyrinth_v2/doors/door_base.tscn" id="10_lix6p"]

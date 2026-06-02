@@ -42,6 +42,7 @@ layout_mode = 2
 text = "Actions"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1274405969]
+visible = false
 layout_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=485489878]
@@ -57,15 +58,16 @@ text = "Rouges"
 layout_mode = 2
 
 [node name="OuvrirPortesVertes" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1225755059]
-visible = false
 layout_mode = 2
-text = "Fermer toutes les portes"
+text = "Changer les portes"
 
 [node name="OuvrirPortesBleues" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=39273700]
+visible = false
 layout_mode = 2
 text = "Ouvrir portes Bleues"
 
 [node name="OuvrirPortesRouges" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1026857068]
+visible = false
 layout_mode = 2
 text = "Ouvrir portes Rouges"
 
