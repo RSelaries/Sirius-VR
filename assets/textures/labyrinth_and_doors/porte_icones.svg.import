@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5h2hto6bv6af"
-path="res://.godot/imported/portes_jspencore.svg-62d8cb701b099ffc9452dfc947711ffc.ctex"
+uid="uid://bhxw4qvsa8f58"
+path="res://.godot/imported/porte_icones.svg-0f775fc561130ce647be58da912066bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/labyrinth_v2/doors/textures/portes_jspencore.svg"
-dest_files=["res://.godot/imported/portes_jspencore.svg-62d8cb701b099ffc9452dfc947711ffc.ctex"]
+source_file="res://assets/textures/labyrinth_and_doors/porte_icones.svg"
+dest_files=["res://.godot/imported/porte_icones.svg-0f775fc561130ce647be58da912066bb.ctex"]
 
 [params]
 

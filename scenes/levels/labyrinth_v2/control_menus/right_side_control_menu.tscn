@@ -4,12 +4,13 @@
 [ext_resource type="Script" uid="uid://tsv4hf630tej" path="res://scripts/custom_nodes/left_side_control_panel_menu.gd" id="1_njqds"]
 [ext_resource type="FontFile" uid="uid://cnuh3n6ycdjpk" path="res://assets/fonts/prompt/Prompt-Black.ttf" id="2_0g87f"]
 [ext_resource type="FontFile" uid="uid://dlw3r21lagkeq" path="res://assets/fonts/prompt/Prompt-Medium.ttf" id="3_hkjou"]
-[ext_resource type="Texture2D" uid="uid://bhxw4qvsa8f58" path="res://scenes/levels/labyrinth_v2/doors/textures/porte_icones.svg" id="4_fkvy7"]
-[ext_resource type="Texture2D" uid="uid://5h2hto6bv6af" path="res://scenes/levels/labyrinth_v2/doors/textures/portes_jspencore.svg" id="5_5pdjf"]
+[ext_resource type="Texture2D" uid="uid://bhxw4qvsa8f58" path="res://assets/textures/labyrinth_and_doors/porte_icones.svg" id="4_fkvy7"]
+[ext_resource type="Texture2D" uid="uid://5h2hto6bv6af" path="res://assets/textures/labyrinth_and_doors/portes_jspencore.svg" id="5_5pdjf"]
 [ext_resource type="Script" uid="uid://m1ikb5qwdbrh" path="res://scenes/levels/labyrinth_v2/control_menus/watcher_camera.gd" id="5_fkvy7"]
-[ext_resource type="Texture2D" uid="uid://cedrrkm0bcklh" path="res://assets/textures/labyrinth_texture.svg" id="5_p1nsd"]
+[ext_resource type="Texture2D" uid="uid://cedrrkm0bcklh" path="res://assets/textures/labyrinth_and_doors/labyrinth_texture.svg" id="5_p1nsd"]
+[ext_resource type="Texture2D" uid="uid://pq687id6mam8" path="res://assets/textures/labyrinth_and_doors/dissolving_door.svg" id="5_t0d5m"]
 [ext_resource type="Script" uid="uid://dm5vyy0tt3er5" path="res://scenes/levels/labyrinth_v2/control_menus/objects_position_points.gd" id="6_p1nsd"]
-[ext_resource type="Texture2D" uid="uid://dmv3b0xyw0uvl" path="res://assets/textures/labyrinth_exit_room.svg" id="8_mwkqh"]
+[ext_resource type="Texture2D" uid="uid://dmv3b0xyw0uvl" path="res://assets/textures/labyrinth_and_doors/labyrinth_exit_room.svg" id="8_mwkqh"]
 [ext_resource type="Texture2D" uid="uid://32pjjqkao5e3" path="res://assets/textures/player_position.png" id="8_njqds"]
 
 [sub_resource type="Environment" id="Environment_5pdjf"]
@@ -108,6 +109,13 @@ texture = ExtResource("4_fkvy7")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="PorteDissolving" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/Portes" unique_id=1134541561]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("5_t0d5m")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="PortesJsp" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/Portes" unique_id=1889921079]
 texture_filter = 1
 layout_mode = 2
@@ -127,6 +135,7 @@ size = Vector2i(1050, 1050)
 render_target_update_mode = 4
 
 [node name="WatcherCamera" type="Camera3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport" unique_id=1104660109]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 0, 9.746907, 0)
 cull_mask = 4
 environment = SubResource("Environment_5pdjf")
@@ -142,6 +151,12 @@ pixel_size = 0.0625
 texture = ExtResource("5_p1nsd")
 metadata/_edit_lock_ = true
 
+[node name="TestPlayerXR" type="XROrigin3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport" unique_id=1276054730]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.8433914, -0.53729963, 0, 0.53729963, 0.8433914, 25.060953, -3.8146973e-06, 2.6080465)
+
+[node name="XRCamera3D" type="XRCamera3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport/TestPlayerXR" unique_id=99762464]
+
 [node name="PlayerPoint" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture" unique_id=273089826]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(16, 16)
@@ -152,10 +167,8 @@ texture = ExtResource("8_njqds")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=1295481199]
-visible = false
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=1010037976]
 layout_mode = 2
-color = Color(0.14117648, 0.14117648, 0.14117648, 1)
 
 [node name="ObjectsPositionPoints" type="Control" parent="MarginContainer/HBoxContainer/LabyrinthMap" unique_id=1278414505]
 layout_mode = 2

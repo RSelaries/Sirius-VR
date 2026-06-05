@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cg505yk8i210u" path="res://scenes/levels/labyrinth_v2/labyrinth_v2.gd" id="2_i81g1"]
 [ext_resource type="PackedScene" uid="uid://dbib7fybud10o" path="res://scenes/levels/labyrinth_v2/doors/icons_door/icons_door.tscn" id="9_hwde8"]
 [ext_resource type="Material" uid="uid://b60ncxecqhht5" path="res://resources/materiels/concrete/concrete.tres" id="9_tmdj6"]
-[ext_resource type="Texture2D" uid="uid://cedrrkm0bcklh" path="res://assets/textures/labyrinth_texture.svg" id="10_hwde8"]
+[ext_resource type="Texture2D" uid="uid://cedrrkm0bcklh" path="res://assets/textures/labyrinth_and_doors/labyrinth_texture.svg" id="10_hwde8"]
 [ext_resource type="PackedScene" uid="uid://by1ahikc0fxe2" path="res://scenes/levels/labyrinth_v2/doors/door_base.tscn" id="10_lix6p"]
 [ext_resource type="PackedScene" uid="uid://5krwluxge8ab" path="res://scenes/levels/labyrinth_v2/doors/dissolving_door/dissolving_door.tscn" id="12_jrbwi"]
 [ext_resource type="Script" uid="uid://bv5rcfuldk0he" path="res://scenes/waiting_room/waiting_room_script.gd" id="12_v4sj2"]

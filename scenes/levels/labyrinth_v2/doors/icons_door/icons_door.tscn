@@ -58,7 +58,7 @@ emission_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0otqf"]
 resource_local_to_scene = true
-size = Vector3(0.2, 0.2, 0.07347656)
+size = Vector3(0.2, 0.2, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24nke"]
 transparency = 1
@@ -76,108 +76,100 @@ transparency = 1
 albedo_texture = SubResource("ViewportTexture_bu88f")
 emission_enabled = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gd5v2"]
-resource_local_to_scene = true
-size = Vector3(0.2, 0.2, 0.07347656)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b8324"]
 transparency = 1
 emission_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_klndd"]
+[sub_resource type="QuadMesh" id="QuadMesh_gd5v2"]
 resource_local_to_scene = true
 size = Vector2(0.2, 0.2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8m3cu"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_klndd"]
 viewport_path = NodePath("DoorBase/CSGBox3D46/Puzzle/Puzzle4/Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydh6i"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8m3cu"]
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_8m3cu")
+albedo_texture = SubResource("ViewportTexture_klndd")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgf7b"]
 transparency = 1
 emission_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_dh1et"]
+[sub_resource type="QuadMesh" id="QuadMesh_ydh6i"]
 resource_local_to_scene = true
 size = Vector2(0.2, 0.2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_6eoel"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_dh1et"]
 viewport_path = NodePath("DoorBase/CSGBox3D46/Puzzle/Puzzle5/Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rycvd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eoel"]
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_6eoel")
+albedo_texture = SubResource("ViewportTexture_dh1et")
 emission_enabled = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gn01g"]
-resource_local_to_scene = true
-size = Vector3(0.2, 0.2, 0.07347656)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_khwqg"]
 transparency = 1
 emission_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_dcjot"]
+[sub_resource type="QuadMesh" id="QuadMesh_rycvd"]
 resource_local_to_scene = true
 size = Vector2(0.2, 0.2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_sculp"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_gn01g"]
 viewport_path = NodePath("DoorBase/CSGBox3D46/Puzzle/Puzzle6/Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyuy7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcjot"]
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_sculp")
+albedo_texture = SubResource("ViewportTexture_gn01g")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc7u6"]
 transparency = 1
 emission_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_iarqv"]
+[sub_resource type="QuadMesh" id="QuadMesh_sculp"]
 resource_local_to_scene = true
 size = Vector2(0.2, 0.2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rwxp7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_kyuy7"]
 viewport_path = NodePath("DoorBase/CSGBox3D46/Puzzle/Puzzle7/Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j4lf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iarqv"]
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_rwxp7")
+albedo_texture = SubResource("ViewportTexture_kyuy7")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iabq0"]
 transparency = 1
 emission_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_bhc0h"]
+[sub_resource type="QuadMesh" id="QuadMesh_rwxp7"]
 resource_local_to_scene = true
 size = Vector2(0.2, 0.2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_te2wc"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_1j4lf"]
 viewport_path = NodePath("DoorBase/CSGBox3D46/Puzzle/Puzzle8/Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sr24e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhc0h"]
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_te2wc")
+albedo_texture = SubResource("ViewportTexture_1j4lf")
 emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_av142"]
 transparency = 1
 emission_enabled = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_mgfij"]
+[sub_resource type="QuadMesh" id="QuadMesh_te2wc"]
 resource_local_to_scene = true
 size = Vector2(0.2, 0.2)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ehxg0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_sr24e"]
 viewport_path = NodePath("DoorBase/CSGBox3D46/Puzzle/Puzzle9/Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o30v2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mgfij"]
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ehxg0")
+albedo_texture = SubResource("ViewportTexture_sr24e")
 emission_enabled = true
 
 [node name="IconsDoor" type="Node3D" unique_id=1097825016]
@@ -270,6 +262,7 @@ screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740798)
 shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle3" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=1799087717 instance=ExtResource("8_oui71")]
@@ -308,7 +301,8 @@ screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle3/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gd5v2")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.04574077)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle4" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=1252691051 instance=ExtResource("8_oui71")]
 unique_name_in_owner = true
@@ -338,15 +332,16 @@ script = ExtResource("10_c28wc")
 metadata/_custom_type_script = "uid://bt0a0pmt5a7jd"
 
 [node name="Screen" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle4" index="1"]
-mesh = SubResource("QuadMesh_klndd")
-surface_material_override/0 = SubResource("StandardMaterial3D_ydh6i")
+mesh = SubResource("QuadMesh_gd5v2")
+surface_material_override/0 = SubResource("StandardMaterial3D_8m3cu")
 
 [node name="StaticBody3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle4" index="2"]
 screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle4/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gd5v2")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740813)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle5" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=676956207 instance=ExtResource("8_oui71")]
 unique_name_in_owner = true
@@ -376,15 +371,16 @@ script = ExtResource("10_c28wc")
 metadata/_custom_type_script = "uid://bt0a0pmt5a7jd"
 
 [node name="Screen" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle5" index="1"]
-mesh = SubResource("QuadMesh_dh1et")
-surface_material_override/0 = SubResource("StandardMaterial3D_rycvd")
+mesh = SubResource("QuadMesh_ydh6i")
+surface_material_override/0 = SubResource("StandardMaterial3D_6eoel")
 
 [node name="StaticBody3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle5" index="2"]
 screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle5/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gn01g")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740798)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle6" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=1746342703 instance=ExtResource("8_oui71")]
 unique_name_in_owner = true
@@ -414,15 +410,16 @@ script = ExtResource("10_c28wc")
 metadata/_custom_type_script = "uid://bt0a0pmt5a7jd"
 
 [node name="Screen" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle6" index="1"]
-mesh = SubResource("QuadMesh_dcjot")
-surface_material_override/0 = SubResource("StandardMaterial3D_kyuy7")
+mesh = SubResource("QuadMesh_rycvd")
+surface_material_override/0 = SubResource("StandardMaterial3D_dcjot")
 
 [node name="StaticBody3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle6" index="2"]
 screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle6/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gn01g")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740798)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle7" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=1091423532 instance=ExtResource("8_oui71")]
 unique_name_in_owner = true
@@ -452,15 +449,16 @@ script = ExtResource("10_c28wc")
 metadata/_custom_type_script = "uid://bt0a0pmt5a7jd"
 
 [node name="Screen" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle7" index="1"]
-mesh = SubResource("QuadMesh_iarqv")
-surface_material_override/0 = SubResource("StandardMaterial3D_1j4lf")
+mesh = SubResource("QuadMesh_sculp")
+surface_material_override/0 = SubResource("StandardMaterial3D_iarqv")
 
 [node name="StaticBody3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle7" index="2"]
 screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle7/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gn01g")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740783)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle8" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=1031716393 instance=ExtResource("8_oui71")]
 unique_name_in_owner = true
@@ -490,15 +488,16 @@ script = ExtResource("10_c28wc")
 metadata/_custom_type_script = "uid://bt0a0pmt5a7jd"
 
 [node name="Screen" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle8" index="1"]
-mesh = SubResource("QuadMesh_bhc0h")
-surface_material_override/0 = SubResource("StandardMaterial3D_sr24e")
+mesh = SubResource("QuadMesh_rwxp7")
+surface_material_override/0 = SubResource("StandardMaterial3D_bhc0h")
 
 [node name="StaticBody3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle8" index="2"]
 screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle8/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gn01g")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740813)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Puzzle9" parent="DoorBase/CSGBox3D46/Puzzle" unique_id=1799402181 instance=ExtResource("8_oui71")]
 unique_name_in_owner = true
@@ -528,15 +527,16 @@ script = ExtResource("10_c28wc")
 metadata/_custom_type_script = "uid://bt0a0pmt5a7jd"
 
 [node name="Screen" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle9" index="1"]
-mesh = SubResource("QuadMesh_mgfij")
-surface_material_override/0 = SubResource("StandardMaterial3D_o30v2")
+mesh = SubResource("QuadMesh_te2wc")
+surface_material_override/0 = SubResource("StandardMaterial3D_mgfij")
 
 [node name="StaticBody3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle9" index="2"]
 screen_size = Vector2(0.2, 0.2)
 viewport_size = Vector2(200, 200)
 
 [node name="CollisionShape3D" parent="DoorBase/CSGBox3D46/Puzzle/Puzzle9/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_gn01g")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.045740798)
+shape = SubResource("BoxShape3D_0otqf")
 
 [node name="Popup" type="Window" parent="." unique_id=1364257222]
 unique_name_in_owner = true
