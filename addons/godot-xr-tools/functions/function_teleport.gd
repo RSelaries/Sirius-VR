@@ -382,6 +382,8 @@ func _property_can_revert(property : StringName) -> bool:
 func _property_get_revert(property : StringName): # Variant
 	if property == "player_material":
 		return _DefaultMaterial
+	else:
+		return null
 
 
 # Set enabled property

@@ -12,6 +12,17 @@
 [ext_resource type="Script" uid="uid://dm5vyy0tt3er5" path="res://scenes/levels/labyrinth_v2/control_menus/objects_position_points.gd" id="6_p1nsd"]
 [ext_resource type="Texture2D" uid="uid://dmv3b0xyw0uvl" path="res://assets/textures/labyrinth_and_doors/labyrinth_exit_room.svg" id="8_mwkqh"]
 [ext_resource type="Texture2D" uid="uid://32pjjqkao5e3" path="res://assets/textures/player_position.png" id="8_njqds"]
+[ext_resource type="Script" uid="uid://clkudrvii8fda" path="res://scenes/levels/labyrinth_v2/control_menus/player_discovering.gd" id="10_uoe02"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoe02"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_uoe02"]
 
 [sub_resource type="Environment" id="Environment_5pdjf"]
 ambient_light_source = 2
@@ -36,6 +47,9 @@ corner_radius_bottom_left = 50
 [sub_resource type="LabelSettings" id="LabelSettings_5xy6a"]
 font = ExtResource("3_hkjou")
 font_size = 33
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvs5e"]
+bg_color = Color(0.94509804, 0.64705884, 0.654902, 1)
 
 [node name="LabyrinthControlMenu" type="Control" unique_id=1322640464]
 layout_mode = 3
@@ -89,52 +103,80 @@ size_flags_horizontal = 3
 [node name="LabyrinthMapContainer" type="AspectRatioContainer" parent="MarginContainer/HBoxContainer/LabyrinthMap" unique_id=889409467]
 layout_mode = 2
 
-[node name="ExitRoom" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=600000129]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=1990874534]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uoe02")
+
+[node name="PlayerDiscovering" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer" unique_id=1010037976]
+clip_children = 1
+layout_mode = 2
+offset_transform_enabled = true
+texture = SubResource("DrawableTexture2D_uoe02")
+script = ExtResource("10_uoe02")
+base_color = Color(1, 1, 1, 0)
+visibility_range = 170
+
+[node name="ExitRoom" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering" unique_id=600000129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("8_mwkqh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Portes" type="MarginContainer" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=265005318]
-layout_mode = 2
+[node name="Portes" type="MarginContainer" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering" unique_id=265005318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
-[node name="PorteIcones" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/Portes" unique_id=732247311]
+[node name="PorteIcones" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/Portes" unique_id=732247311]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("4_fkvy7")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="PorteDissolving" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/Portes" unique_id=1134541561]
+[node name="PorteDissolving" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/Portes" unique_id=1134541561]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_t0d5m")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="PortesJsp" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/Portes" unique_id=1889921079]
+[node name="PortesJsp" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/Portes" unique_id=1889921079]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("5_5pdjf")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LabyrinthMapTexture" type="SubViewportContainer" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=1166427531]
+[node name="LabyrinthMapTexture" type="SubViewportContainer" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering" unique_id=1166427531]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture" unique_id=1680519899]
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/LabyrinthMapTexture" unique_id=1680519899]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(1050, 1050)
+size = Vector2i(1044, 1044)
 render_target_update_mode = 4
 
-[node name="WatcherCamera" type="Camera3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport" unique_id=1104660109]
+[node name="WatcherCamera" type="Camera3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/LabyrinthMapTexture/SubViewport" unique_id=1104660109]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 0, 9.746907, 0)
 cull_mask = 4
@@ -143,7 +185,7 @@ projection = 1
 size = 60.75
 script = ExtResource("5_fkvy7")
 
-[node name="LabyrinthTexture" type="Sprite3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport" unique_id=1574405715]
+[node name="LabyrinthTexture" type="Sprite3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/LabyrinthMapTexture/SubViewport" unique_id=1574405715]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5.51, 0)
 layers = 4
 material_override = SubResource("StandardMaterial3D_t0d5m")
@@ -151,13 +193,12 @@ pixel_size = 0.0625
 texture = ExtResource("5_p1nsd")
 metadata/_edit_lock_ = true
 
-[node name="TestPlayerXR" type="XROrigin3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport" unique_id=1276054730]
+[node name="TestPlayerXR" type="XROrigin3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/LabyrinthMapTexture/SubViewport" unique_id=1276054730]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.8433914, -0.53729963, 0, 0.53729963, 0.8433914, 25.060953, -3.8146973e-06, 2.6080465)
 
-[node name="XRCamera3D" type="XRCamera3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture/SubViewport/TestPlayerXR" unique_id=99762464]
+[node name="XRCamera3D" type="XRCamera3D" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/LabyrinthMapTexture/SubViewport/TestPlayerXR" unique_id=99762464]
 
-[node name="PlayerPoint" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/LabyrinthMapTexture" unique_id=273089826]
+[node name="PlayerPoint" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer/PanelContainer/PlayerDiscovering/LabyrinthMapTexture" unique_id=273089826]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
@@ -166,9 +207,6 @@ size_flags_vertical = 4
 texture = ExtResource("8_njqds")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/LabyrinthMap/LabyrinthMapContainer" unique_id=1010037976]
-layout_mode = 2
 
 [node name="ObjectsPositionPoints" type="Control" parent="MarginContainer/HBoxContainer/LabyrinthMap" unique_id=1278414505]
 layout_mode = 2
@@ -203,5 +241,22 @@ label_settings = SubResource("LabelSettings_5xy6a")
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=2127126885]
 layout_mode = 2
 theme_override_constants/separation = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=244043996]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 7
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/MarginContainer" unique_id=1771170288]
+custom_minimum_size = Vector2(5, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_gvs5e")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2" unique_id=1900168624]
+layout_mode = 2
+text = "Porte"
+label_settings = SubResource("LabelSettings_5xy6a")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/BackToWaitRoom" to="." method="_on_back_to_wait_room_pressed"]
