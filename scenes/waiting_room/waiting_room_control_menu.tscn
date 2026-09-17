@@ -46,9 +46,10 @@ layout_mode = 2
 
 [node name="LabyrintheButton" type="Button" parent="BackgroundColor/CenterContainer/VBoxContainer" unique_id=117091169]
 layout_mode = 2
-text = "Labyrinthe"
+text = "Commencer"
 
 [node name="LabyrintheV2Button" type="Button" parent="BackgroundColor/CenterContainer/VBoxContainer" unique_id=1404632992]
+visible = false
 layout_mode = 2
 text = "Labyrinthe v2"
 

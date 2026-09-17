@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cntlyd1dylex2"]
+
+[ext_resource type="Script" uid="uid://cmrupx0ug2vl" path="res://scenes/levels/labyrinth_v2/doors/door_exit/door_exit.gd" id="1_2dlhf"]
+[ext_resource type="PackedScene" uid="uid://by1ahikc0fxe2" path="res://scenes/levels/labyrinth_v2/doors/door_base.tscn" id="1_41x5p"]
+
+[node name="DoorExit" type="Node3D" unique_id=1453321401]
+script = ExtResource("1_2dlhf")
+
+[node name="DoorBase" parent="." unique_id=1091367641 instance=ExtResource("1_41x5p")]
+unique_name_in_owner = true
+
+[editable path="DoorBase"]

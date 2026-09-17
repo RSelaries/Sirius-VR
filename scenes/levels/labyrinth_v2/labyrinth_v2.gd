@@ -12,6 +12,7 @@ extends Node
 func _ready() -> void:
 	debug_sun.hide()
 	debug_sun.queue_free()
+	$"../TestCamera".queue_free()
 
 
 func _physics_process(_delta: float) -> void:

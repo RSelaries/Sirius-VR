@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b58eaehod7m06"]
 
-[ext_resource type="PackedScene" uid="uid://cm08st5sk3poc" path="res://assets/meshes/torch/torch.glb" id="1_38jqo"]
+[ext_resource type="PackedScene" uid="uid://cm08st5sk3poc" path="res://assets/meshes/labyrinth_v2/torch/torch.glb" id="1_38jqo"]
 [ext_resource type="Script" uid="uid://dnptd8khncpc0" path="res://scripts/custom_nodes/labyrinth_v2_pickable_object.gd" id="1_v445i"]
 [ext_resource type="Texture2D" uid="uid://cjp4uabq4st8j" path="res://assets/textures/flame_spritesheet.png" id="2_2hovb"]
 [ext_resource type="Gradient" path="res://assets/textures/fire_gradient.tres" id="3_lgqut"]

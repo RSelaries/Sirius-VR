@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cu1ft2t8kq43t" path="res://scenes/levels/labyrinth_v1/mur_changeant/mur_changeant.tscn" id="7_vi2im"]
 [ext_resource type="Script" uid="uid://bv5rcfuldk0he" path="res://scenes/waiting_room/waiting_room_script.gd" id="8_disbp"]
 [ext_resource type="PackedScene" uid="uid://b68ltqrxac7iu" path="res://scenes/levels/labyrinth_v1/labyrinthe_control_menu.tscn" id="9_disbp"]
-[ext_resource type="PackedScene" uid="uid://7b8luegcl46b" path="res://assets/meshes/treasure_chest/treasure_chest.glb" id="10_dajjv"]
-[ext_resource type="PackedScene" uid="uid://h0pv88uhu56s" path="res://assets/meshes/dancing_rig/Silly Dancing.fbx" id="11_vuyrs"]
-[ext_resource type="PackedScene" uid="uid://cufb0mmsudgme" path="res://assets/meshes/toothless/toothless.glb" id="12_vuyrs"]
+[ext_resource type="PackedScene" uid="uid://7b8luegcl46b" path="res://assets/meshes/labyrinth_v1/treasure_chest/treasure_chest.glb" id="10_dajjv"]
+[ext_resource type="PackedScene" uid="uid://dbib7fybud10o" path="res://scenes/levels/labyrinth_v2/doors/door_icons/door_icons.tscn" id="11_pcdsg"]
+[ext_resource type="PackedScene" uid="uid://h0pv88uhu56s" path="res://assets/meshes/labyrinth_v1/dancing_rig/Silly Dancing.fbx" id="11_vuyrs"]
+[ext_resource type="PackedScene" uid="uid://cufb0mmsudgme" path="res://assets/meshes/labyrinth_v1/toothless/toothless.glb" id="12_vuyrs"]
 [ext_resource type="AudioStream" uid="uid://cdtniscmup4ta" path="res://assets/sounds/toothless_meme_music.mp3" id="13_nq44w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_co7d3"]
@@ -26,65 +27,65 @@ background_mode = 2
 sky = SubResource("Sky_hps2h")
 tonemap_mode = 2
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0o1pi"]
-animation = &"Grip"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pcdsg"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_rut4j"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rut4j"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_44h2p"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_44h2p"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_utsdx"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_utsdx"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_0exyt"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_0exyt"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2uil4"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_0o1pi")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_pcdsg")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_pcdsg")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_rut4j")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_rut4j")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_44h2p")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_44h2p")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_utsdx")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_utsdx")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_0exyt")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2uil4"]
-animation = &"Grip"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nnvn4"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_8fgto"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8fgto"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_5srni"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5srni"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qw2u5"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_qw2u5"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_43uxd"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_43uxd"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5e7fx"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_2uil4")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_nnvn4")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_nnvn4")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_8fgto")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_8fgto")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_5srni")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_5srni")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_qw2u5")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_qw2u5")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_43uxd")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -109,14 +110,125 @@ ao_enabled = true
 ao_texture = ExtResource("4_vi2im")
 uv1_triplanar = true
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5e7fx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_g8odg"]
+viewport_path = NodePath("DoorBase/CSGBox3D46/HandSprite/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mthry"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_g8odg")
+emission_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5ryf1"]
+viewport_path = NodePath("DoorBase/CSGBox3D46/HandSprite/SubViewport")
+
+[sub_resource type="QuadMesh" id="QuadMesh_qscgw"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4o32r"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle2/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghyn1"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_4o32r")
+emission_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pcdsg"]
+size = Vector3(0.2, 0.2, 0.295)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0evyk"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5st6i"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle3/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vp7jb"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_5st6i")
+emission_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_kkk7y"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w1tpv"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle4/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ce203"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_w1tpv")
+emission_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_psw5y"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0piu5"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle5/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_205xt"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_0piu5")
+emission_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_b82ti"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_up1p0"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle6/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0j51"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_up1p0")
+emission_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_xhbjp"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q5cg2"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle7/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l4gc"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_q5cg2")
+emission_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_imi2r"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5qqys"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle8/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ev2ik"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_5qqys")
+emission_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_hwo26"]
+resource_local_to_scene = true
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_so0tp"]
+viewport_path = NodePath("LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle9/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcwul"]
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_so0tp")
+emission_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6maei"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8odg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtn73"]
 resource_local_to_scene = true
 transparency = 1
 emission_enabled = true
-emission_texture = SubResource("ViewportTexture_5e7fx")
+emission_texture = SubResource("ViewportTexture_6maei")
 
 [node name="Labyrinthe" unique_id=311686013 instance=ExtResource("1_x0oo5")]
 
@@ -128,10 +240,10 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="AnimationTree" parent="XROrigin3D/LeftHand/LeftHand" parent_id_path=PackedInt32Array(1696142797) index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_0exyt")
+tree_root = SubResource("AnimationNodeBlendTree_2uil4")
 
 [node name="AnimationTree" parent="XROrigin3D/RightHand/RightHand" parent_id_path=PackedInt32Array(657636777) index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_43uxd")
+tree_root = SubResource("AnimationNodeBlendTree_5e7fx")
 
 [node name="LabyrintheStructure" type="CSGCombiner3D" parent="." index="3" unique_id=937594507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
@@ -465,7 +577,7 @@ transform = Transform3D(-0.8259901, 0, -0.56368476, 0, 1, 0, 0.56368476, 0, -0.8
 [node name="Silly Dancing" parent="LabyrintheStructure/Sortie" index="4" unique_id=179681511 instance=ExtResource("11_vuyrs")]
 transform = Transform3D(-0.94253665, 0, 0.33410308, 0, 1.0000004, 0, -0.33410308, 0, -0.94253665, -1.1911538, 0.00010188669, -0.45448112)
 
-[node name="Skeleton3D" parent="LabyrintheStructure/Sortie/Silly Dancing" index="0" unique_id=1147183619]
+[node name="Skeleton3D" parent="LabyrintheStructure/Sortie/Silly Dancing" index="0" unique_id=339881789]
 bones/0/position = Vector3(-0.044957384, 0.8016102, -0.17601553)
 bones/0/rotation = Quaternion(-0.024130115, -0.16135557, -0.026339728, 0.9862496)
 bones/1/rotation = Quaternion(-0.01610722, -0.0052776616, 0.0003461275, 0.99985635)
@@ -567,13 +679,13 @@ bones/62/rotation = Quaternion(0.75068724, -0.089239106, 0.10179815, 0.6466392)
 bones/63/position = Vector3(1.3877788e-17, 0.1572156, 1.3877788e-17)
 bones/63/rotation = Quaternion(0.28824735, 0.03189458, 0.014096098, 0.95692086)
 
-[node name="AnimationPlayer" parent="LabyrintheStructure/Sortie/Silly Dancing" index="1" unique_id=903941247]
+[node name="AnimationPlayer" parent="LabyrintheStructure/Sortie/Silly Dancing" index="1" unique_id=1945586507]
 autoplay = &"mixamo_com"
 
 [node name="toothless" parent="LabyrintheStructure/Sortie" index="5" unique_id=221122462 instance=ExtResource("12_vuyrs")]
 transform = Transform3D(-0.6249719, 0, 0.005923068, 0, 0.625, 0, -0.005923068, 0, -0.6249719, 0.8621931, 0.02469256, -1.1747284)
 
-[node name="Skeleton3D" parent="LabyrintheStructure/Sortie/toothless/Sketchfab_model/6de9701d952d46fb82b3ebeb952802b9_fbx/Object_2/RootNode/Object_4" parent_id_path=PackedInt32Array(221122462, 1862721649) index="26" unique_id=427073289]
+[node name="Skeleton3D" parent="LabyrintheStructure/Sortie/toothless/Sketchfab_model/6de9701d952d46fb82b3ebeb952802b9_fbx/Object_2/RootNode/Object_4" parent_id_path=PackedInt32Array(221122462, 1810879810) index="26" unique_id=1021975211]
 bones/1/position = Vector3(-0.0073867054, 0.35201293, -0.032217827)
 bones/1/rotation = Quaternion(-0.035688765, 0.30075535, 0.0026547906, 0.95302963)
 bones/2/rotation = Quaternion(0.08490814, 0.10444775, 0.03968223, 0.9901043)
@@ -615,7 +727,7 @@ bones/32/rotation = Quaternion(0.070927195, -0.009842141, -0.13709405, 0.9879665
 bones/33/position = Vector3(-1.4901161e-08, 0.068740904, -6.7055225e-08)
 bones/33/rotation = Quaternion(-8.940697e-08, -1.7881393e-07, 1.6391277e-07, 1)
 
-[node name="AnimationPlayer" parent="LabyrintheStructure/Sortie/toothless" index="1" unique_id=2067370280]
+[node name="AnimationPlayer" parent="LabyrintheStructure/Sortie/toothless" index="1" unique_id=1177541532]
 autoplay = &"mixamo_com"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LabyrintheStructure/Sortie/toothless" index="2" unique_id=375594453]
@@ -624,54 +736,148 @@ volume_db = 80.0
 autoplay = true
 max_distance = 5.0
 
+[node name="DoorIcons" parent="LabyrintheStructure/Sortie" index="6" unique_id=1097825016 instance=ExtResource("11_pcdsg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.86526453, -6, -6.105937)
+
+[node name="CSGBox3D46" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase" parent_id_path=PackedInt32Array(1097825016, 431615062) index="0" unique_id=605465682]
+size = Vector3(0.5, 5.178833, 2.5)
+
+[node name="HandSprite" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46" index="0" unique_id=2106070071]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.25199986, -0.9984393, -0.3761556)
+material_override = SubResource("StandardMaterial3D_mthry")
+texture = SubResource("ViewportTexture_5ryf1")
+
+[node name="Puzzle" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46" index="1" unique_id=720708840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32756066, 0)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle2" parent_id_path=PackedInt32Array(1097825016, 1497653479) index="1"]
+mesh = SubResource("QuadMesh_qscgw")
+surface_material_override/0 = SubResource("StandardMaterial3D_ghyn1")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle3" parent_id_path=PackedInt32Array(1097825016, 1799087717) index="1"]
+mesh = SubResource("QuadMesh_0evyk")
+surface_material_override/0 = SubResource("StandardMaterial3D_vp7jb")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle3/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle4" parent_id_path=PackedInt32Array(1097825016, 1252691051) index="1"]
+mesh = SubResource("QuadMesh_kkk7y")
+surface_material_override/0 = SubResource("StandardMaterial3D_ce203")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle4/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle5" parent_id_path=PackedInt32Array(1097825016, 676956207) index="1"]
+mesh = SubResource("QuadMesh_psw5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_205xt")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle5/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle6" parent_id_path=PackedInt32Array(1097825016, 1746342703) index="1"]
+mesh = SubResource("QuadMesh_b82ti")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0j51")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle6/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle7" parent_id_path=PackedInt32Array(1097825016, 1091423532) index="1"]
+mesh = SubResource("QuadMesh_xhbjp")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l4gc")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle7/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle8" parent_id_path=PackedInt32Array(1097825016, 1031716393) index="1"]
+mesh = SubResource("QuadMesh_imi2r")
+surface_material_override/0 = SubResource("StandardMaterial3D_ev2ik")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle8/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="Screen" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle9" parent_id_path=PackedInt32Array(1097825016, 1799402181) index="1"]
+mesh = SubResource("QuadMesh_hwo26")
+surface_material_override/0 = SubResource("StandardMaterial3D_dcwul")
+
+[node name="CollisionShape3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle9/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1274662)
+shape = SubResource("BoxShape3D_pcdsg")
+debug_color = Color(0.106126174, 0.60124344, 0, 1)
+
+[node name="FoamParticles" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase" parent_id_path=PackedInt32Array(1097825016, 431615062) index="1" unique_id=1056915693]
+visible = false
+
+[node name="AudioStreamPlayer3D" parent="LabyrintheStructure/Sortie/DoorIcons/DoorBase" parent_id_path=PackedInt32Array(1097825016, 431615062) index="2" unique_id=1118280254]
+stream = null
+
 [node name="Label3D" type="Label3D" parent="LabyrintheStructure" index="7" unique_id=1038047383]
 transform = Transform3D(1, -3.821371e-15, -1.7484555e-07, 1.7484555e-07, 4.371139e-08, 1, 3.821371e-15, -1, 4.371139e-08, 1.2914505, 5.010347, 9.983907)
 text = "Sortie"
 font_size = 96
 
-[node name="MursRouges" type="Node3D" parent="." index="4" unique_id=1117922225]
+[node name="MursRouges" type="Node3D" parent="LabyrintheStructure" index="8" unique_id=1117922225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="MurChangeant" parent="MursRouges" index="0" unique_id=889320792 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant" parent="LabyrintheStructure/MursRouges" index="0" unique_id=889320792 instance=ExtResource("7_vi2im")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 6)
 
-[node name="MurChangeant2" parent="MursRouges" index="1" unique_id=223081333 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant2" parent="LabyrintheStructure/MursRouges" index="1" unique_id=223081333 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 2.5, -1)
 
-[node name="MurChangeant3" parent="MursRouges" index="2" unique_id=1742610852 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant3" parent="LabyrintheStructure/MursRouges" index="2" unique_id=1742610852 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 2.5, -5)
 
-[node name="MurChangeant4" parent="MursRouges" index="3" unique_id=857465569 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant4" parent="LabyrintheStructure/MursRouges" index="3" unique_id=857465569 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5, 2.5, -3)
 
-[node name="MurChangeant5" parent="MursRouges" index="4" unique_id=639516881 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant5" parent="LabyrintheStructure/MursRouges" index="4" unique_id=639516881 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 2.5, 3)
 
-[node name="MurChangeant6" parent="MursRouges" index="5" unique_id=246622387 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant6" parent="LabyrintheStructure/MursRouges" index="5" unique_id=246622387 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 2.5, 6)
 
-[node name="MursBleus" type="Node3D" parent="." index="5" unique_id=674952382]
+[node name="MursBleus" type="Node3D" parent="LabyrintheStructure" index="9" unique_id=674952382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="MurChangeant7" parent="MursBleus" index="0" unique_id=348474228 instance=ExtResource("7_vi2im")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 1, 2.5, 11)
-groupe = 1
-
-[node name="MurChangeant8" parent="MursBleus" index="1" unique_id=839328191 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant8" parent="LabyrintheStructure/MursBleus" index="0" unique_id=839328191 instance=ExtResource("7_vi2im")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -2, 2.5, 0)
 groupe = 1
 
-[node name="MurChangeant9" parent="MursBleus" index="2" unique_id=824921774 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant12" parent="LabyrintheStructure/MursBleus" index="1" unique_id=76272349 instance=ExtResource("7_vi2im")]
+transform = Transform3D(-2.1855695e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855695e-07, 1, 2.5, 11)
+groupe = 1
+
+[node name="MurChangeant9" parent="LabyrintheStructure/MursBleus" index="2" unique_id=824921774 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-2.1855695e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855695e-07, -3, 2.5, 3)
 groupe = 1
 
-[node name="MurChangeant10" parent="MursBleus" index="3" unique_id=397684614 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant10" parent="LabyrintheStructure/MursBleus" index="3" unique_id=397684614 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-1, 0, 2.6226834e-07, 0, 1, 0, -2.6226834e-07, 0, -1, 6, 2.5, -4)
 groupe = 1
 
-[node name="MurChangeant11" parent="MursBleus" index="4" unique_id=1525766649 instance=ExtResource("7_vi2im")]
+[node name="MurChangeant11" parent="LabyrintheStructure/MursBleus" index="4" unique_id=1525766649 instance=ExtResource("7_vi2im")]
 transform = Transform3D(-1, 0, 2.6226834e-07, 0, 1, 0, -2.6226834e-07, 0, -1, -8, 2.5, 8)
 groupe = 1
 
-[node name="ControlPanelLoader" type="Node" parent="." index="6" unique_id=1776117250]
+[node name="ControlPanelLoader" type="Node" parent="." index="4" unique_id=1776117250]
 script = ExtResource("8_disbp")
 left_side_control_menu = ExtResource("9_disbp")
 camera_position = Vector3(0, 9.476595, 0.986279)
@@ -683,9 +889,9 @@ controller_can_rotate_view = false
 metadata/_custom_type_script = "uid://bv5rcfuldk0he"
 
 [node name="MenuViewport" parent="PlayerMenu" parent_id_path=PackedInt32Array(78160560) index="0" unique_id=442761183]
-material = SubResource("StandardMaterial3D_g8odg")
+material = SubResource("StandardMaterial3D_mtn73")
 
-[node name="Camera3D" type="Camera3D" parent="." index="8" unique_id=685057362]
+[node name="Camera3D" type="Camera3D" parent="." index="6" unique_id=685057362]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9.476595, 0.986279)
 projection = 1
 size = 21.0
@@ -697,3 +903,13 @@ far = 200.0
 [editable path="XROrigin3D/RightHand/RightHand/Hand_Nails_low_R"]
 [editable path="LabyrintheStructure/Sortie/Silly Dancing"]
 [editable path="LabyrintheStructure/Sortie/toothless"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle2"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle3"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle4"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle5"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle6"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle7"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle8"]
+[editable path="LabyrintheStructure/Sortie/DoorIcons/DoorBase/CSGBox3D46/Puzzle/Puzzle9"]

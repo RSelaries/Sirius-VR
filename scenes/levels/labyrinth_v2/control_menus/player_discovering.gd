@@ -1,4 +1,3 @@
-@tool
 extends TextureRect
 
 const ICON = preload("uid://bxtkpdp36jwvj")

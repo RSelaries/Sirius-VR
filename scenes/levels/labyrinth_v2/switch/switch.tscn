@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://dtcmcg60s6oa5"]
+
+[ext_resource type="PackedScene" uid="uid://bcla3wum14ruy" path="res://assets/meshes/labyrinth_v2/switch/switch.glb" id="1_biaje"]
+[ext_resource type="Script" uid="uid://cs6ffj301bets" path="res://scenes/levels/labyrinth_v2/switch/switch.gd" id="1_djx60"]
+[ext_resource type="Material" uid="uid://b60ncxecqhht5" path="res://resources/materiels/concrete/concrete.tres" id="3_f7rpl"]
+[ext_resource type="Texture2D" uid="uid://c6kpkh1nies5g" path="res://assets/textures/hand_print.svg" id="3_vwkl8"]
+[ext_resource type="Texture2D" uid="uid://b6qjkc822m60r" path="res://assets/textures/radial_progress_tex.png" id="3_vxa8p"]
+[ext_resource type="PackedScene" uid="uid://dc5t2qgmhb2nf" path="res://addons/godot-xr-tools/objects/hand_pose_area.tscn" id="5_vxa8p"]
+[ext_resource type="Animation" uid="uid://dhsoxntrktx0p" path="res://addons/godot-xr-tools/hands/animations/left/Sign 5.res" id="6_djx60"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="7_kvwar"]
+[ext_resource type="Texture2D" uid="uid://cjp4uabq4st8j" path="res://assets/textures/flame_spritesheet.png" id="9_2yqn6"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_02tu6"]
+viewport_path = NodePath("HandSprite/SubViewport")
+
+[sub_resource type="Resource" id="Resource_djx60"]
+script = ExtResource("7_kvwar")
+open_pose = ExtResource("6_djx60")
+closed_pose = ExtResource("6_djx60")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qd8cd"]
+size = Vector3(0.18359375, 0.18530273, 0.118652344)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fmpk"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("9_2yqn6")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 5
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id="Gradient_kvwar"]
+offsets = PackedFloat32Array(0, 0.236287, 0.28692, 0.329114, 0.997722, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0.28125, 0, 1, 1, 0.962646, 0.402344, 0.990493, 1, 0.140625, 0, 0.998312, 0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f7rpl"]
+gradient = SubResource("Gradient_kvwar")
+
+[sub_resource type="Curve" id="Curve_2yqn6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+metadata/_snap_enabled = true
+
+[sub_resource type="CurveTexture" id="CurveTexture_3o17t"]
+curve = SubResource("Curve_2yqn6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6fmpk"]
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 0.22
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.089999996
+initial_velocity_max = 0.59999996
+angular_velocity_min = 39.999985
+angular_velocity_max = 39.999985
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_3o17t")
+color = Color(4, 1.257, 0.594, 0.8)
+color_ramp = SubResource("GradientTexture1D_f7rpl")
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+anim_offset_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_uva2u"]
+size = Vector2(0.3, 0.3)
+
+[node name="Switch" type="Node3D" unique_id=1139395307]
+script = ExtResource("1_djx60")
+
+[node name="switch" parent="." unique_id=117937568 instance=ExtResource("1_biaje")]
+
+[node name="Pedestal" parent="switch" index="0" unique_id=958257960]
+material_override = ExtResource("3_f7rpl")
+
+[node name="HandSprite" type="Sprite3D" parent="." unique_id=1232193535]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.19716626, 0.9803701, 0, -0.9803701, 0.19716626, -0.0062855184, 0.7146771, 0.044448305)
+pixel_size = 0.0002
+texture = SubResource("ViewportTexture_02tu6")
+
+[node name="SubViewport" type="SubViewport" parent="HandSprite" unique_id=1860956265]
+transparent_bg = true
+size = Vector2i(1000, 1000)
+
+[node name="CenterContainer" type="CenterContainer" parent="HandSprite/SubViewport" unique_id=814602729]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HandSprite/SubViewport/CenterContainer" unique_id=1007094297]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+fill_mode = 4
+texture_progress = ExtResource("3_vxa8p")
+
+[node name="TextureRect" type="TextureRect" parent="HandSprite/SubViewport/CenterContainer" unique_id=1952273919]
+custom_minimum_size = Vector2(650, 650)
+layout_mode = 2
+texture = ExtResource("3_vwkl8")
+expand_mode = 1
+
+[node name="HandPoseArea" parent="HandSprite" unique_id=1220538752 instance=ExtResource("5_vxa8p")]
+collision_layer = 2228224
+collision_mask = 131072
+right_pose = SubResource("Resource_djx60")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HandSprite/HandPoseArea" unique_id=680611263]
+transform = Transform3D(1, 0, 0, 0, 0.999998, -3.427267e-07, 0, 3.427267e-07, 0.999998, 0, 7.450581e-09, -0.038330078)
+shape = SubResource("BoxShape3D_qd8cd")
+
+[node name="Flames" type="GPUParticles3D" parent="." unique_id=855726461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9378824, 0.4616921, -0.20801556)
+top_level = true
+material_override = SubResource("StandardMaterial3D_6fmpk")
+visibility_range_end = 10.0
+amount = 200
+lifetime = 2.0
+randomness = 1.0
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_6fmpk")
+draw_pass_1 = SubResource("QuadMesh_uva2u")
+
+[node name="Flames2" type="GPUParticles3D" parent="." unique_id=1115342456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.938, 0.462, -0.208)
+top_level = true
+material_override = SubResource("StandardMaterial3D_6fmpk")
+visibility_range_end = 10.0
+amount = 200
+lifetime = 2.0
+randomness = 1.0
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_6fmpk")
+draw_pass_1 = SubResource("QuadMesh_uva2u")
+
+[connection signal="area_entered" from="HandSprite/HandPoseArea" to="." method="_on_hand_pose_area_area_entered"]
+[connection signal="area_exited" from="HandSprite/HandPoseArea" to="." method="_on_hand_pose_area_area_exited"]
+
+[editable path="switch"]

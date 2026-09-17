@@ -6,7 +6,7 @@ extends Node3D
 @onready var menu_function_pointer_left: XRToolsFunctionPointer = %MenuFunctionPointerLeft
 @onready var menu_function_pointer_right: XRToolsFunctionPointer = %MenuFunctionPointerRight
 @onready var movement_turn_right: XRToolsMovementTurn = %MovementTurnRight
-@onready var function_teleport_left: XRToolsFunctionTeleport = %FunctionTeleportLeft
+#@onready var function_teleport_left: XRToolsFunctionTeleport = %FunctionTeleportLeft
 @onready var movement_direct_right: XRToolsMovementDirect = %MovementDirectRight
 
 
@@ -28,13 +28,13 @@ func _update_settings() -> void:
 	# Update movement mode
 	match PlayerManager.movement_mode:
 		PlayerManager.MovementModes.WALK:
-			function_teleport_left.enabled = false
+			#function_teleport_left.enabled = false
 			movement_direct_right.enabled = true
 		PlayerManager.MovementModes.TELEPORT:
-			function_teleport_left.enabled = true
+			#function_teleport_left.enabled = true
 			movement_direct_right.enabled = false
 		PlayerManager.MovementModes.BOTH:
-			function_teleport_left.enabled = true
+			#function_teleport_left.enabled = true
 			movement_direct_right.enabled = true
 
 
