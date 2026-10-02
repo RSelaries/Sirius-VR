@@ -4,6 +4,7 @@ extends Camera3D
 
 
 @onready var player_point: TextureRect = %PlayerPoint
+@onready var player_position_label: Label = %PlayerPositionLabel
 
 
 var player_camera: XRCamera3D
@@ -21,6 +22,8 @@ func _physics_process(_delta: float) -> void:
 	player_point.pivot_offset_ratio = Vector2(.5, .5)
 	player_point.position = get_player_position()
 	player_point.rotation = get_player_rotation()
+	
+	player_position_label.text = "X: %.1f\nY: %.1f" % [player_camera.global_position.x / 3.0, player_camera.global_position.z / 3.0]
 
 
 func get_player_rotation() -> float:
